@@ -19,7 +19,7 @@ function Section({
         </ItemText>
       </Fade>
       <Buttons>
-        <Fade bottom>
+        <Fade top>
           <ButtonGroup>
             <LeftButton>{leftButtonText}</LeftButton>
             {rightButtonText && <RightButton>{rightButtonText}</RightButton>}
@@ -51,6 +51,7 @@ const Wrap = styled.div`
 const ItemText = styled.div`
   padding-top: 15vh;
   text-align: center;
+  
 `;
 
 const Buttons = styled.div`
