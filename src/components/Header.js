@@ -10,40 +10,41 @@ import { useSelector } from 'react-redux';
 const Header = () => {
     const [BurgerStatus, setBurgerStatus] = useState(false);
     const cars =  useSelector(selectCars)
-  return (
-   <Container>
-    <a href='localhost:3000'>
-        <img src="/images/logo.svg" alt="" />
-    </a>
-    <Menu>
-      {cars && cars.map((car,index)=>(
-        <a key={index} href="localhost:3000">{car}</a>
-      ))}
-    </Menu>
-    <RightMenu> 
-
-        <a href="localhost:3000">Shop</a>
-        <a href="localhost:3000">Tesla Account</a>
-
-        <CustomMenu onClick={()=>{setBurgerStatus(true)}}/>
-    </RightMenu>
-    <BurgerNav show={BurgerStatus}>
-        <CloseWrapper>
-            <CustomClose onClick={()=>{setBurgerStatus(false)}}/>
-        </CloseWrapper>
+    return (
+    <Container>
+      <a href='localhost:3000'>
+          <img src="/images/logo.svg" alt="" />
+      </a>
+      <Menu>
         {cars && cars.map((car,index)=>(
-          <div>
-        <li><a key={index} href="localhost:3000">{car}</a></li>
-        </div>
-      ))}
-        <li><a href="localhost:3000">Existing Inventory</a></li>
-        <li><a href="localhost:3000">Used Inventory</a></li>
-        <li><a href="localhost:3000">Trade-In</a></li>
-        <li><a href="localhost:3000">CyberTruck</a></li>
-        <li><a href="localhost:3000">Roadster</a></li>
-        
-    </BurgerNav>
-   </Container>
+          <a key={index} href="localhost:3000">{car}</a>
+        ))}
+      </Menu>
+      <RightMenu> 
+
+          <a href="localhost:3000">Shop</a>
+          <a href="localhost:3000">Tesla Account</a>
+
+          <CustomMenu onClick={()=>{setBurgerStatus(true)}}/>
+      </RightMenu>
+      <BurgerNav show={BurgerStatus}>
+          <CloseWrapper
+            CloseWrapper>
+              <CustomClose onClick={()=>{setBurgerStatus(false)}}/>
+          </CloseWrapper>
+          {cars && cars.map((car,index)=>(
+            <div>
+          <li><a key={index} href="localhost:3000">{car}</a></li>
+          </div>
+        ))}
+          <li><a href="localhost:3000">Existing Inventory</a></li>
+          <li><a href="localhost:3000">Used Inventory</a></li>
+          <li><a href="localhost:3000">Trade-In</a></li>
+          <li><a href="localhost:3000">CyberTruck</a></li>
+          <li><a href="localhost:3000">Roadster</a></li>
+          
+      </BurgerNav>
+    </Container>
   )
 }
 
