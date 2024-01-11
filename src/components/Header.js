@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import MenuIcon from '@material-ui/icons/Menu'
 import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react'
-import { selectCars } from '../features/car/carSlice';
+import { selectCars } from './carslice';
 import { useSelector } from 'react-redux';
 
 
